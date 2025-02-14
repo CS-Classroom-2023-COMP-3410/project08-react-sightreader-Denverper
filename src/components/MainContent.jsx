@@ -8,11 +8,13 @@ const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
   const [currentFile, setCurrentFile] = useState(file);
 
   useEffect(() => {
-    if (file.endsWith('.pls') || file in playlist) {
+    if (file.endsWith('.pls')) {
       fetch(file)
         .then(response => response.text())
         .then(data => {
-          const songs = data.split('\n').filter(line => line.trim() !== '');
+            const songs = data.split('\n')
+            .filter(line => line.trim() !== '')
+            .map(song => `./music/${song}`);
           setPlaylist(songs);
           setCurrentSongIndex(0);
           setCurrentFile(songs[0]);
@@ -22,6 +24,7 @@ const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
       setPlaylist([]);
       setCurrentFile(file);
     }
+    console.log(playlist);
   }, [file]);
 
   const handleSelectSong = (index) => {

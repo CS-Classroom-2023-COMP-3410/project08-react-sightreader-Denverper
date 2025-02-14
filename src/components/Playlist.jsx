@@ -5,7 +5,6 @@ const Playlist = ({ playlist, currentSongIndex, onSelect }) => {
 
   return (
     <div className="mt-4">
-      <h3 className="text-lg font-bold">Playlist</h3>
       <ul className="border p-2">
         {playlist.map((song, index) => (
           <li

@@ -54,14 +54,14 @@ function App() {
         onTune={handleTune} 
         isPlaying={isPlaying} 
         isTuning={isTuning} 
-        onTempoChange={handleTempoChange} // ✅ Now passed to Settings
+        onTempoChange={handleTempoChange} 
       />
 
       <MainContent 
         file={selectedFile} 
         isPlaying={isPlaying} 
         isTuning={isTuning} 
-        tempo={tempo} // ✅ Passed properly
+        tempo={tempo}
         statusMessage={statusMessage} 
       />
     </div>
