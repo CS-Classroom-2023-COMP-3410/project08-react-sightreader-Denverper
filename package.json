@@ -9,12 +9,19 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "tailwindcss": "^4.0.6",
     "vite": "^6.1.0"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "abcjs": "^6.4.4",
     "jscookie": "^1.1.0",
     "pitchfinder": "^2.3.2",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
     "typescript": "^5.7.3"
   }
 }
