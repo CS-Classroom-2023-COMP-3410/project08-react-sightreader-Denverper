@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import PitchDetector from './PitchDetector';
 import { start, stop } from '../utils/helpers';
 
-const DEFAULT_TEMPO = 60; // fun fact: even in the original code, the tempo was hardcoded to 60 as no files contained an inherit tempo, or Q: field
+const DEFAULT_TEMPO = 60; // fun fact: even in the original code, the tempo was hardcoded to 60 when inherit was set as no files contained an inherit tempo, or Q: field
 
 const ABCNotation = ({ file, isTuning, isPlaying, tempo }) => {
   const [abcContent, setAbcContent] = useState('');
