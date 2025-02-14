@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="flex text-gray-900 font-mono flex-col justify-center items-center pt-8 px-12 md:px-20 space-y-4 max-w-full md:max-w-[1200px] mx-auto">
+    <div className="flex text-gray-900 font-mono flex-col justify-center items-center pt-8 mb-24 px-12 md:px-20 space-y-4 max-w-full md:max-w-[1200px] mx-auto">
       <h3 className='text-4xl font-[500]'>ABC Sightreader</h3>
 
       <DescriptionText message={statusMessage}/>

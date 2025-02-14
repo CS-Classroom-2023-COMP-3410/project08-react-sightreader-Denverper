@@ -57,7 +57,7 @@ const ABCNotation = ({ file, isTuning, isPlaying, tempo }) => {
   };
 
   return (
-    <div className="w-full flex flex-col text-gray-500">
+    <div className="w-full flex flex-col text-gray-500 ">
       <h2 className="self-center text-xl">{extractedTempo}</h2>
       <div id="abc-container" className={!isPlaying ? 'text-gray-500' : null}></div>
       <div className='flex justify-between'>
