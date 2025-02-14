@@ -16,7 +16,7 @@ export async function start(visualObj, tempo, onNoteChange) {
 
     if (synth) stop(); // Stop any existing playback before starting again
 
-    // Create or resume AudioContext
+    // Create or resume 
     if (!audioContext || audioContext.state === 'closed') {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
     }
