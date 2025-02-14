@@ -1,5 +1,8 @@
 import ABCJS from 'abcjs';
 
+//helper functions to start, stop, and reset the playback of the ABC notation
+//makes the code more readable and reusable
+
 let audioContext = null;
 let synth = null;
 let timer = null;
