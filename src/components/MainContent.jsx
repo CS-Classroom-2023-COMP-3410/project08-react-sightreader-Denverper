@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ABCNotation from './ABCNotation';
 import Playlist from './Playlist';
+import { stop } from '../utils/helpers';
 
 const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
   const [playlist, setPlaylist] = useState([]);

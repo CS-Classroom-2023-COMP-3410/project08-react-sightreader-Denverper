@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Settings from './components/Settings';
 import MainContent from './components/MainContent';
 import DescriptionText from './components/DescriptionText';
+import { reset, stop } from './utils/helpers';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isTuning, setIsTuning] = useState(false);
   const [statusMessage, setStatusMessage] = useState("Select a file to begin.");
-  const [tempo, setTempo] = useState("inherit"); // ✅ Now managed here
+  const [tempo, setTempo] = useState("inherit"); 
 
   const handleStart = () => {
     setIsPlaying((prev) => {
@@ -35,6 +36,9 @@ function App() {
   const handleFileChange = (file) => {
     setSelectedFile(file);
     setStatusMessage("File loaded. Press Start to Play.");
+    if (isPlaying){
+      handleStart(); // Stop the file when changed
+    }
   };
 
   const handleTempoChange = (newTempo) => {
