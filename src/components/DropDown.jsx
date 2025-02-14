@@ -8,6 +8,7 @@ const DropDown = ({ type, value, onChange, availableFiles, availableTempos }) =>
   useEffect(() => {
       if (type === "file") {
         setOptions(availableFiles);
+        onChange({ target: { value: "./music/" + availableFiles[0] } });
       } else if (type === "tempo") {
         setOptions(availableTempos);
       } else if (type === "mic") {

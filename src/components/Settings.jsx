@@ -3,7 +3,6 @@ import DropDown from './DropDown';
 import Button from './Button';
 
 const availableFiles = [
-  "--Custom ABC--",
   "beginner.pls",
   "cecilio-lesson3-exercise-3.abc",
   "cecilio-lesson2-twinkle-twinkle-little-star.abc",
@@ -67,7 +66,7 @@ const Settings = ({ onFileChange, onStart, onReset, onTune, isPlaying, isTuning,
   const handleTempoChange = (e) => {
     const newTempo = e.target.value;
     setSelectedTempo(newTempo);
-    onTempoChange(newTempo);  // ✅ Notify parent (App.jsx)
+    onTempoChange(newTempo);  
   };
 
   return (
