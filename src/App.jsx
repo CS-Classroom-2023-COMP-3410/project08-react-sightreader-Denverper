@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Settings from './components/Settings';
 import MainContent from './components/MainContent';
 import DescriptionText from './components/DescriptionText';
-import { reset, stop } from './utils/helpers';
 
 
 function App() {
