@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ABCNotation from './ABCNotation';
+import ABCBox from './ABCBox';
 import Playlist from './Playlist';
-import { stop } from '../utils/helpers';
 
 const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
   const [playlist, setPlaylist] = useState([]);
@@ -36,7 +35,7 @@ const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
   return (
     <div className="w-full flex flex-col mt-4 text-gray-600">
       {currentFile && (
-        <ABCNotation file={currentFile} isPlaying={isPlaying} isTuning={isTuning} tempo={tempo} />
+        <ABCBox file={currentFile} isPlaying={isPlaying} isTuning={isTuning} tempo={tempo} />
       )}
       <Playlist playlist={playlist} currentSongIndex={currentSongIndex} onSelect={handleSelectSong} />
     </div>

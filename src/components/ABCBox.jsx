@@ -6,7 +6,7 @@ import { start, stop } from '../utils/helpers';
 
 const DEFAULT_TEMPO = 60; // fun fact: even in the original code, the tempo was hardcoded to 60 when inherit was set as no files contained an inherit tempo, or Q: field
 
-const ABCNotation = ({ file, isTuning, isPlaying, tempo }) => {
+const ABCBox = ({ file, isTuning, isPlaying, tempo }) => {
   const [abcContent, setAbcContent] = useState('');
   const [visualObj, setVisualObj] = useState(null);
   const [extractedTempo, setExtractedTempo] = useState(DEFAULT_TEMPO);
@@ -69,11 +69,11 @@ const ABCNotation = ({ file, isTuning, isPlaying, tempo }) => {
   );
 };
 
-ABCNotation.propTypes = {
+ABCBox.propTypes = {
   file: PropTypes.string.isRequired,
   isTuning: PropTypes.bool.isRequired,
   isPlaying: PropTypes.bool.isRequired,
   tempo: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
-export default ABCNotation;
+export default ABCBox;
