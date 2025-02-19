@@ -24,7 +24,6 @@ const MainContent = ({ file, isPlaying, isTuning, tempo, statusMessage }) => {
       setPlaylist([]);
       setCurrentFile(file);
     }
-    console.log(playlist);
   }, [file]);
 
   const handleSelectSong = (index) => {
